@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shelf — A Personal Book Manager
 
 A quiet, personal space for readers to log their books, track reading status,
@@ -132,3 +133,6 @@ Visit [http://localhost:3000](http://localhost:3000).
 ## License
 
 MIT — do whatever you'd like with this.
+=======
+# bookmanager
+>>>>>>> f068af60e5eb789e6e810507e2b93763d816feb0
