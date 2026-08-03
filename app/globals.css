@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  background-color: #f4f6fb;
+  color: #1a1a2e;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Custom focus ring */
+*:focus-visible {
+  outline: 2px solid #6c63ff;
+  outline-offset: 2px;
+}
+
+/* Animated background blobs */
+.blob {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #d4f0e8, transparent);
+  top: -120px;
+  right: -80px;
+}
+
+.blob-2 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #e8d5f5, transparent);
+  bottom: 80px;
+  left: -100px;
+}
+
+.blob-3 {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, #ffd6e0, transparent);
+  bottom: 30%;
+  right: 10%;
+}
+
+/* Sidebar icon active indicator */
+.sidebar-icon-active::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  width: 3px;
+  background: #6c63ff;
+  border-radius: 0 4px 4px 0;
+}
+
+/* Card hover animation */
+.book-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.book-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(108,99,255,0.14);
+}
+
+/* Tag pill hover */
+.tag-pill {
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* Status badge glow */
+.status-reading {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+.status-completed {
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+.status-want {
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+}
